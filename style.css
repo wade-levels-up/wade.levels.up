@@ -1,0 +1,141 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: lightsteelblue;
+}
+
+a {
+    color: aquamarine;
+}
+
+.grid-container {
+    display: grid;
+    grid-template: 100px auto 50px/ 200px 8fr;
+    grid-template-areas: 
+                        "header header"
+                        "sidebar main"
+                        "footer footer";
+    gap: 100px;
+    align-items: start;
+
+    background: black url("./images/grungey_alley.jpeg");
+    background-size: cover;
+    border: solid 1px grey;
+
+    margin: 15px;
+    padding: 30px;
+}
+
+.grid-item {
+    background-color: rgb(34, 27, 27);
+    border-radius: 5px;
+    padding: 20px 30px 15px 30px;
+}
+
+.main-container {
+    display: grid;
+    grid-template: auto auto auto auto auto / 80%;
+    grid-template-areas:
+                        "home"
+                        "about"
+                        "portfolio"
+                        "other"
+                        "contact";
+    gap: 150px;
+    justify-items: center;
+}
+
+.main-container-item1 {
+    grid-area: home;
+    background-color: rgb(34, 27, 27);
+    border-radius: 5px;
+    padding: 20px 30px 20px 30px;
+}
+
+.main-container-item2 {
+    grid-area: about;
+    background-color: rgb(34, 27, 27);
+    border-radius: 5px;
+    padding: 20px 30px 20px 30px;
+}
+
+.main-container-item3 {
+    grid-area: portfolio;
+    background-color: rgb(34, 27, 27);
+    border-radius: 5px;
+    padding: 20px 30px 20px 30px;
+    width: 80%;
+}
+
+.main-container-item4 {
+    grid-area: other;
+    background-color: rgb(34, 27, 27);
+    border-radius: 5px;
+    padding: 20px 30px 20px 30px;
+    width: 80%;
+}
+
+.main-container-item5 {
+    grid-area: contact;
+    background-color: rgb(34, 27, 27);
+    border-radius: 5px;
+    padding: 20px 30px 20px 30px;
+    width: 80%;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    font-size: larger;
+    position: fixed;
+    top: 250px;
+}
+.main{
+    grid-area: main;
+    font-size: large;
+}
+
+.footer {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    grid-area: footer;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+figcaption {
+    font-size: x-small;
+    font-style: italic;
+    opacity: 0.5;
+    margin: 3px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.flex-item {
+    display: flex;
+    flex-basis: 250px;
+    margin: 10px;
+}
+
+.flex-item-100-title {
+    display: flex;
+    flex-basis: 100%;
+
+}
