@@ -12,91 +12,94 @@
   <body>
   
     <header>
-      <h1>Wade Foster</h1>
-      <p>Welcome to my online portfolio</p>
-      <nav>
-        <a href="#about">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-      </nav>
- 
+      <h1>Hey, I'm Wade.<br> Full-Stack Dev, <br>Musician and <br>Introvert</h1>
+      <img
+      class="profile-picture"
+      src="./images/me1.png"
+      alt="Picture of Wade"
+    />
     </header>
 
-    <section id="about">
-      <img
-        class="profile"
-        src="./images/me1.png"
-        alt="Picture of Wade"
-      />
-      <h2>About Me</h2>
-      <p>
-        33yo living in Melbourne Australia. I love coffee, web development and stormy weather. You'll also find me skateboarding,
-        spending time with my partner and keeping fit.
-      </p>
-    </section>
+    <main>
+      <section id="about">
+        <div>
+          <p>34-year-old full-stack dev from Melbourne utilizing the PERN stack.<br> [PostgreSQL, Express, React, Node.js]</p>
+          <p>I'm a self-starter who loves a challenge. Doing hard things is how you level-up, <em>right?</em><br>Last year I took a leap of faith, stepped back from my job and learned to code.</p>
+          <p>You'll likely find me enjoying coffee, tinkering with cars, skating in the early morning sun, working out or soaking up knowledge of a new technology [Currently Prisma ORM]</p>
+        </div>
+      </section>
 
-    <section id="skills">
-      <h2>Skills</h2>
+      <section id="projects">
+        <h2>My projects</h2>
+        <p>Here's some of the cool stuff I've created 😃</p>
+        <div class="projects-grid">
 
-      <div class="skill-item">
-        <label htmlFor="html">HTML</label>
-        <progress id="html" max="100" value="65"></progress>
-      </div>
+          <div id="members-only" class="projects-card" tabindex="0">
+            <div class="details">
+              <img src="./images/membersonly.gif" alt="members-only project page" width="200px">
+              <p>Private message board requiring user authentication. Implements different tiers of membership and levels of access depending on membership status.</p>
+            </div>
+            <span>
+              <h3>Members Only</h3>
+              <a href="https://members-only-production-f053.up.railway.app/" target="_blank"><i class="fa-solid fa-eye"></i>View Live</a>
+            </span>
+          </div>
 
-      <div class="skill-item">
-        <label htmlFor="css">CSS</label>
-        <progress id="css" max="100" value="55"></progress>
-      </div>
+          <div id="autosales" class="projects-card" tabindex="0">
+            <div class="details">
+              <img src="./images/autosales.gif" alt="autosales project page" width="200px">
+              <p>Car sales website that keeps an inventory of cars listed for sale. Users can add new makes and models to the database</p>
+            </div>
+            <span>
+              <h3>Autosales</h3>
+              <a href="https://inventory-application-production-6eff.up.railway.app/" target="_blank"><i class="fa-solid fa-eye"></i>View Live</a>
+            </span>
+          </div>
 
-      <div class="skill-item">
-        <label htmlFor="javascript">JavaScript</label>
-        <progress id="javascript" max="100" value="45"></progress>
-      </div>
+          <div id="battleship" class="projects-card" tabindex="0">
+            <div class="details">
+              <img src="./images/battleship.gif" alt="members-only project page" width="200px">
+              <p>A challenging browser-based Battleship game against the computer. Think you can win?</p>
+            </div>
+            <span>
+              <h3>Battleship</h3>
+              <a href="https://wade-levels-up.github.io/battleship/" target="_blank"><i class="fa-solid fa-eye"></i>View Live</a>
+            </span>
+          </div>
 
-      <p>In late March of 2024 I started to teach myself web development with the aim
-         of acquiring a full-stack web development skillset. Currently I'm progressing
-         through The Odin Project curriculum, completing projects to showcase here as I go.
-         Check in regularly to see what I've been up to!
-      </p>
+          <div id="digimon-memory-game" class="projects-card" tabindex="0">
+            <div class="details">
+              <img src="./images/digimon-memory-card.gif" alt="members-only project page" width="200px">
+              <p>See how many unique Digimon you can select from the cards to increase your score. Choose the same one more than once and you lose.</p>
+            </div>
+            <span>
+              <h3>Digimon Memory Game</h3>
+              <a href="https://wade-levels-up.github.io/battleship/" target="_blank"><i class="fa-solid fa-eye"></i>View Live</a>
+            </span>
+          </div>
 
-    </section>
+        </div>
+      </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project-list">
-        <details>
-          <summary>Calculator</summary>
-          <p>
-            The challenge here was to create a fully operational virtual calculator 
-            that could carry out all basic mathematical equations such as addition, 
-            subtraction, division and multiplication.<br>
-            I completed this without the guidance of a tutorial as the final project of 
-            The Odin Project's Foundations curriculum.
-          </p>
-          <p>Follow the link below to check it out.</p>
-          <a href="https://wade-levels-up.github.io/calculator/" target="_blank" rel="noopener noreferrer">Calculator Project</a>
-        </details>
-      </div>
-      <details>
-        <summary>Web-based Pokedex API</summary>
-        <p>
-          This time around I wanted to create a Pokedex-like experience where
-          you could see different Pokemon laid out on cards within the
-          browser. Each card grabbed information from a publicly available API
-        </p>
-        <p>Follow the link below to check it out.</p>
-        <a href="https://wade-levels-up.github.io/pokedex-api/" target="_blank" rel="noopener noreferrer">Pokedex API Project</a>
-      </details>
-    </div>
-    </section>
+      <section id="contact">
+        <h2>Let's keep in touch</h2>
+        <p>If you're after a developer for your next project, have something you'd like to ask or just want to stay in touch, feel free to reach out.</p>
+        <a href= "mailto:ruuksine@gmail.com"><i class="fa-solid fa-envelope"></i>ruuksine@gmail.com</a>
+      </section>
+    </main>
 
     <footer>
       <nav>
-        <a href="https://github.com/wade-levels-up" target="_blank"><span class="fa-brands fa-github glow"></span></a>
-        <a href="https://www.instagram.com/wade.levels.up/" target="_blank"><span class="fa-brands fa-instagram glow"></span></a>
+        <a href="https://github.com/wade-levels-up" target="_blank"><span class="fa-brands fa-github"></span></a>
+        <a href="https://www.instagram.com/wade.levels.up/" target="_blank"><span class="fa-brands fa-instagram"></span></a>
       </nav>
     </footer>
 
   <script src="https://kit.fontawesome.com/74043cfcaf.js" crossorigin="anonymous"></script>
+  <script>
+      function navigateTo(url) {
+        window.location.href = url;
+      }
+  </script>
   </body>
 </html>
