@@ -10,15 +10,92 @@
   </head>
 
   <body>
+
+    <nav class="fixedNav">
+        <button onclick="navigateTo('index.html')"><i class="fa-solid fa-house"></i>Home</button>
+        <button onclick="navigateTo('https://wade-levels-up.github.io/battleship/')"><i class="fa-solid fa-eye"></i>Live Site</button>
+    </nav>
   
     <header>
-      <nav>
-        <button onclick="navigateTo('index.html')"><i class="fa-solid fa-house"></i>Home</button>
-      </nav>
+        <h1>Battleship</h1>
     </header>
 
     <main>
-      <h1>Nothing here yet...</h1>
+        <section id="project-description">
+            <h2>Description</h2>
+            <p>Battleship is a JavaScript game I created using Test-Driven Development. It implements a graph data structure comprised of nodes (vertices) and edges which form the board.
+            </p>
+        </section>
+
+        <section class="img-container">
+            <figure>
+              <img class="tall-img" src="./images/battleship-ip14pro-view.png" alt="">
+              <figcaption>Viewing the layout of your ships. 'Reset' will reset the game and shuffle the layout.<br>'View' will switch to the enemies' board.</figcaption>
+            </figure>
+        </section>
+
+        <section id="objective">
+            <h2>Objective</h2>
+            <p>The objective was to create a classic game of Battleship using Jest for <abbr title="Test-Driven Development">TDD</abbr> and a graph data structure to layout the board.<br>
+              The computer controlled opponent would need it's own playstyle and logic. It couldn't be too difficult, so an element of randomness needed to be implemented to humanize it's moves.
+            </p>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <img class="tall-img hit-anim" src="./images/battleship-ip14pro-hit.png" alt="">
+            <figcaption>Scoring a hit on an enemy ship! 💥</figcaption>
+          </figure>
+        </section>
+
+        <section id="tech">
+            <h2>Tech used</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Git</li>
+                <li>Jest</li>
+            </ul>
+            <div>
+              <p>
+                JavaScript initialized a Gameboard class with 100 nodes and 5 ships, each node referencing adjacent neighbors. The game was first made playable in the console before adding a graphical interface.
+              </p>
+              <br>
+              <p>
+                Making the game console-playable required extensive Jest test cases to ensure hits were accurate and ships didn't overhang the play area. Writing tests first and then fulfilling them built confidence and saved debugging time.
+              </p>
+            </div>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <img class="sqr-img" src="./images/FPRH.gif"alt="">
+            <figcaption>Small touches like animated tiles and CSS screen shakes make the game more immersive</figcaption>
+          </figure>
+        </section>
+
+        <section id="challenges">
+            <h2>Challenges</h2>
+            <p>
+              Placement of ships was quite challenging. It involved working out whether a node was a valid/open position, and also had to check ahead multiple nodes in the case of longer ships to make sure they were valid positions too.
+            </p>
+            <p>
+              Another difficulty was adjusting the computer opponent to be challenging, but not unbeatable or a complete pushover.<br>
+              Originally, I went down the path of getting it to try guess ahead attack positions based off multiple previously hit positions. This proved overly complex and ultimately unnecessary.<br>
+              In the end I made it do a handful of actions based on chance:<br> Attack randomly, attack an adjacent node to the last one hit, or simply <em>land a direct hit on a previously hit ship.</em><br>
+              Whilst the last action seems counterintuitive and unfair at first, it only starts to happen the longer the game goes on. In this way, the difficulty could be adjusted and the player experience remained good.
+            </p>
+            <p>
+              The computer had to operate in different modes. Seek ships with random shots. If a ship was hit, switch into kill mode and try finish off the ship that was hit.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Let's keep in touch</h2>
+            <p>If you're after a developer for your next project, have something you'd like to ask or just want to stay in touch, feel free to reach out.</p>
+            <a href= "mailto:ruuksine@gmail.com"><i class="fa-solid fa-envelope"></i>ruuksine@gmail.com</a>
+          </section>
     </main>
 
     <footer>
