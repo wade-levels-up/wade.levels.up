@@ -13,7 +13,7 @@
 
     <nav class="fixedNav">
         <button onclick="navigateTo('index.html')"><i class="fa-solid fa-house"></i>Home</button>
-        <button onclick="navigateTo('https://members-only-production-f053.up.railway.app/')"><i class="fa-solid fa-eye"></i>View Live Site</button>
+        <button onclick="navigateTo('https://members-only-production-f053.up.railway.app/')"><i class="fa-solid fa-eye"></i>Live Site</button>
     </nav>
   
     <header>
@@ -23,19 +23,34 @@
     <main>
         <section id="project-description">
             <h2>Description</h2>
-            <p>Members Only is an Express application I built when I was learning user-authentication. It allows members to sign up and then verify their membership status if they know a secret passcode.
-                <br>Once signed in members have access to a message board, however the names of other members who have posted messages, as well as the date of the post is only visible to verified members. <br>Additionally, members with admin status can delete posts.
+            <p>
+                Members Only is an Express web app I created to learn user authentication. Members can sign up and verify their status using a secret passcode. Verified members can see names and dates on the message board, while admins can delete posts.
             </p>
         </section>
 
-        <section>
-            <div class="mo-img-box-1"></div>
+        <section class="img-container">
+            <figure>
+              <img class="sqr-img" src="./images/mo-ipad-air1.webp" alt="">
+              <figcaption>Viewing message board as a verified member on Members Only website (Ipad Mini 6th gen)</figcaption>
+            </figure>
+          </section>
+
+        <section id="objective">
+            <h2>Objective</h2>
+            <p>The goal with this project was to understand how to handle storing sensitive information such as user's passwords,
+                keeping track of sessions and providing different information based on a members status.
+            </p>
+        </section>
+
+        <section class="img-container">
+            <img class="tall-img" src="./images/mo-validation-new-user.webp" alt="Signing up as a new user on Iphone 12">
+            <img class="tall-img" src="./images/mo-new-message-ip12.webp" alt="Creating a new message on Iphone 12">
         </section>
 
         <section id="tech">
             <h2>Tech used</h2>
             <ul>
-                <li>Vanilla CSS</li>
+                <li>CSS</li>
                 <li>Express</li>
                 <li>EJS</li>
                 <li>PostgreSQL</li>
@@ -46,30 +61,22 @@
             </ul>
             <div>
                 <p>Passport and Bcyrpt were the main stars in this project. Utilizing Passport's local strategy I was able to verify users' 
-                    credentials against what was stored in the database and allow sessions to persist, whilst Bcrypt made hashing (and salting) passwords straightforward.
-                    Storing the encrpyted passwords in a single table field was also nice as it meant not having to store salts separately.
+                    credentials against the database and allow sessions to persist. <br>Bcrypt made hashing (and salting) passwords straightforward.
+                    Storing the encrpyted passwords in a single field was also nice as it meant not having to store salts separately.
                 </p>
                 <br>
                 <p>Express-Validator was used to validate and sanitise incoming data to make sure the database was receiving the correct information,
-                    as well as providing error messages to the user in the event the wrong information was provided.
+                    as well as providing error messages to the user in the event invalid information was provided.
                 </p>
             </div>
         </section>
 
-        <section>
-            <div class="mo-img-box-2"></div>
-        </section>
-
-        <section id="objective">
-            <h2>Objective</h2>
-            <p>The goal with this project was to understand how to handle storing sensitive information such as user's passwords,
-                keeping track of sessions and providing different information based on a members status.
-            </p>
-        </section>
-
-        <section>
-            <div class="mo-img-box-3"></div>
-        </section>
+        <section class="img-container">
+            <figure>
+              <img class="sqr-img" src="./images/mo-session-persists.webp" alt="">
+              <figcaption>Sessions persist for 30 days after a user leaves the website</figcaption>
+            </figure>
+          </section>
 
         <section id="challenges">
             <h2>Challenges</h2>

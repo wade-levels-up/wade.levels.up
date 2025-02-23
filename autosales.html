@@ -10,15 +10,90 @@
   </head>
 
   <body>
+
+    <nav class="fixedNav">
+        <button onclick="navigateTo('index.html')"><i class="fa-solid fa-house"></i>Home</button>
+        <button onclick="navigateTo('https://inventory-application-production-6eff.up.railway.app/')"><i class="fa-solid fa-eye"></i>Live Site</button>
+    </nav>
   
     <header>
-      <nav>
-        <button onclick="navigateTo('index.html')"><i class="fa-solid fa-house"></i>Home</button>
-      </nav>
+        <h1>Autosales</h1>
     </header>
 
     <main>
-      <h1>Nothing here yet...</h1>
+        <section id="project-description">
+            <h2>Description</h2>
+            <p>Autosales is an inventory management style application where users can add makes and models into the database. Models can by be viewed by their corresponding categories and their details updated if the password is known.<br>
+              Destructive actions such as deleting or updating are password protected.
+            </p>
+        </section>
+
+        <section class="img-container">
+            <img class="tall-img" src="./images/autosales-iphone14pro.webp" alt="Autosales website homepage displayed on Iphone 14 Pro">
+            <img class="tall-img" src="./images/autosales-ip14-update.webp" alt="Autosales website updating car model displayed on Iphone 14 Pro">
+        </section>
+
+        <section id="objective">
+            <h2>Objective</h2>
+            <p>The goal with this project was implement CRUD (Create Read Update and Delete) methods across a relational database including categories and inventory items.<br>
+              In this scenario I chose cars, however the skills I learnt through this project are applicable to other businesses, e-commerce or even internal systems that handle inventory.
+            </p>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <img class="sqr-img" src="./images/autosales-S2k.webp" alt="">
+            <figcaption>Honda S2000 - Viewing car details on Autosales website</figcaption>
+          </figure>
+        </section>
+
+        <section id="tech">
+            <h2>Tech used</h2>
+            <ul>
+                <li>CSS</li>
+                <li>Express</li>
+                <li>EJS</li>
+                <li>PostgreSQL</li>
+                <li>Express-Validator</li>
+                <li>Railway (PaaS)</li>
+            </ul>
+            <div>
+              <p>
+                PostgreSQL handled data persistence and user entries in a relational database. 
+                To simplify raw SQL queries, I created functions for my controllers. 
+                EJS templates with pages and partials saved time by reusing templates and populating them with relevant data.
+              </p>
+              <br>
+              <p>
+                Hosting on Railway (PaaS) was ideal. 
+                It streamlined deployment from my GitHub repository, hosted my PostgreSQL database, and made setting up environment variables easy. 
+                The project loads quickly, unlike other platforms I noticed were slower.
+              </p>
+            </div>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <img class="sqr-img" src="./images/autosales-allmodels.webp" alt="">
+            <figcaption>Viewing All Models in CSS grid layout on Autosales website</figcaption>
+          </figure>
+        </section>
+
+        <section id="challenges">
+            <h2>Challenges</h2>
+            <p>
+              Handling raw SQL was challenging due to potential typos. 
+              I solved this by using variables to store SQL queries as strings for my functions. 
+              Deciding on the project structure and reusing EJS templates for multiple categories was another challenge. 
+              Ensuring users returned to their last viewed category after updates was also crucial for a good user experience.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Let's keep in touch</h2>
+            <p>If you're after a developer for your next project, have something you'd like to ask or just want to stay in touch, feel free to reach out.</p>
+            <a href= "mailto:ruuksine@gmail.com"><i class="fa-solid fa-envelope"></i>ruuksine@gmail.com</a>
+          </section>
     </main>
 
     <footer>
