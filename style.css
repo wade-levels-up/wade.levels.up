@@ -41,7 +41,7 @@
 }
 
 h1 {
-  color: #FFFFF6;
+  color: var(--text-color);
   letter-spacing: 0.6rem;
 }
 

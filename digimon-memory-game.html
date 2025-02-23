@@ -10,15 +10,82 @@
   </head>
 
   <body>
+
+    <nav class="fixedNav">
+        <button onclick="navigateTo('index.html')"><i class="fa-solid fa-house"></i>Home</button>
+        <button onclick="navigateTo('https://digimon-memory-game.netlify.app/')"><i class="fa-solid fa-eye"></i>Live Site</button>
+    </nav>
   
     <header>
-      <nav>
-        <button onclick="navigateTo('index.html')"><i class="fa-solid fa-house"></i>Home</button>
-      </nav>
+        <h1 style="text-align: center">Digimon Memory Game</h1>
+        <img width="100px" src="./images/agumon.gif" alt="">
     </header>
 
     <main>
-        <h1>Nothing here yet...</h1>
+        <section id="project-description">
+            <h2>Description</h2>
+            <p>The Digimon Memory Game is a single page, browser-based game made with React. Players aim to select as many unique Digimon as they can from the cards presented.<br>
+              Cards can be reshuffled and a new hand presented to the player. If the same Digimon card is selected twice the score resets to 0. A highscore keeps track of the best score reached.
+            </p>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <img class="tall-img" src="./images/digimon-ip14-pro.webp" alt="">
+            <figcaption>Digimon Card Game on Iphone 14 Pro</figcaption>
+          </figure>
+        </section>
+
+        <section id="objective">
+            <h2>Objective</h2>
+            <p>Continue to build upon my knowledge of React's useState hook and integrate the useEffect hook to load resources from an external API when the main component mounts.<br>
+              Implement responsive design and deploy via Netlify.
+            </p>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <img class="sqr-img" src="./images/digimon-ipad-mini.webp" alt="">
+            <figcaption>Responsive grid layout with cards on Ipad Mini</figcaption>
+          </figure>
+        </section>
+
+        <section id="tech">
+            <h2>Tech used</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Netlify</li>
+                <li>GitHub</li>
+            </ul>
+            <div>
+              <p>
+                Choosing React made the most sense for this project. It handled rendering of the cards when the state changed as well as the score, which saved having to do it from scratch in JavaScript<br>
+                Utilizing the useEffect hook to collect data to populate the cards when the app mounted meant this data was readily available for use.<br> 
+              </p>
+              <br>
+              <p>
+                Deploying on Netlify was straightforward. It builds from my Github project respository which made the process much easier than if I'd gone down the route of deploying a React app via Github pages alone.<br>
+              </p>
+            </div>
+        </section>
+
+        <section id="challenges">
+            <h2>Challenges</h2>
+            <p>
+              This project taught me the value of passing functions as props rather than state. I had challenges with too many renders occuring because
+              child elements would receive state that changed (and consequently triggered renders). By passing functions as props that acted on the parent element's score
+              rather than the score state itself, the card elements wouldn't need to re-render every time the score changed.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Let's keep in touch</h2>
+            <p>If you're after a developer for your next project, have something you'd like to ask or just want to stay in touch, feel free to reach out.</p>
+            <a href= "mailto:ruuksine@gmail.com"><i class="fa-solid fa-envelope"></i>ruuksine@gmail.com</a>
+          </section>
     </main>
 
     <footer>
