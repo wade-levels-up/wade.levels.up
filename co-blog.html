@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wade Levels Up</title>
+  </head>
+
+  <body>
+
+    <nav class="fixedNav">
+        <button onclick="navigateTo('index.html')"><i class="fa-solid fa-house"></i>Home</button>
+        <button onclick="navigateTo('https://coblog.netlify.app/')"><i class="fa-solid fa-eye"></i>Live Site</button>
+    </nav>
+  
+    <header>
+        <h1>Co.Blog</h1>
+    </header>
+
+    <main>
+        <section id="project-description">
+            <h2>Description</h2>
+            <p>Co.Blog is a blog site where multiple authors can contribute posts. Separate clients for authors and non-authors consume a RESTFUL API which exposes <abbr title="Create Read Update Delete">CRUD</abbr> methods to users.
+        </section>
+
+        <section class="img-container">
+            <img class="tall-img" src="./images/coblog-ip14-pro-1.webp" alt="Co.Blog user client in mobile view">
+            <img class="tall-img" src="./images/coblog-ip14-pro-3.webp" alt="Co.Blog author client in mobile view">
+        </section>
+        
+        <section class="img-container">
+          <button onclick="navigateTo('https://coblog.netlify.app/')"><i class="fa-solid fa-user"></i>User Client</button>
+          <button onclick="navigateTo('https://coblogauthor.netlify.app/')"><i class="fa-solid fa-pencil"></i>Author Client</button>
+        </section>
+
+        <section id="objective">
+            <h2>Objective</h2>
+            <p>Co.Blog is a Jamstack project where the back-end and front-ends were created separately. The back-end API handles authentication with <abbr title="JSON Web Tokens">JWT's</abbr> so that it can remain stateless. <br />
+              The API was created before the clients so careful thought had to be put into architecting end points, as well as which end points would be accessible to different users.
+            </p>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <img class="sqr-img" src="./images/coblog-ipad-mini.webp" alt="">
+            <figcaption>Server-side validation and sanitization of form inputs provides feedback to the user as well as protecting end points from dirty data</figcaption>
+          </figure>
+        </section>
+
+        <section id="tech">
+            <h2>Tech used</h2>
+            <ul>
+                <li>React</li>
+                <li>Styled-Components</li>
+                <li>Express</li>
+                <li>PostgreSQL</li>
+                <li>Prisma</li>
+                <li>Node</li>
+            </ul>
+            <div>
+              <p>
+                Both front end clients were created using React which meant updating the <abbr title="Document Object Model">DOM</abbr> was a breeze. React's state management and handling of side-effects made retrieving blog posts and user comments into an app-like experience. React Router allowed sharing of post URLs and access to specific posts<br />
+                Utilizing Styled-Components meant I could keep CSS styling scoped locally and within the same file.
+              </p>
+              <br>
+              <p>
+                Prisma <abbr title="Object-Relational Mapper">ORM</abbr> allowed me to work with the PostgreSQL database without having to flesh-out verbose, error-prone SQL queries. This meant my focus could stay on architecting my API end points rather than wrestling my database!
+              </p>
+            </div>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <img class="sqr-img" src="./images/coblog.webp" alt="">
+            <figcaption>Responsive design means Co.Blog looks equally as good on desktop or mobile</figcaption>
+          </figure>
+        </section>
+
+        <section id="challenges">
+            <h2>Challenges</h2>
+            <p>
+              The first challenge of this project was deciding which end points and resources needed to be accessible, and by who.<br />
+              I spent a great deal of time testing end points using Postman to ensure they were only accessible to the right users and in the end not all of the end points were consumed by the front end.<br />
+              Things such as updating user details are available on the API, which could prove useful in the future should a user want to change their password or email address.<br />
+              <br />
+              Secondly, deciding how my front ends would consume the API was also quite challenging. Originally I went down the path of creating a single page application, which looked to be working out well until it came down to
+              implementing a way for users to share specifc blog posts...<br >
+              This meant going back and implementing React Router so that I could create shareable URLs to each post, as well as cleaning up no-longer-required state.<br />
+              <br />
+              Lastly, my API was exposed! This meant implementing a proxy server to abstract the main server's address.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Let's Keep in Touch</h2>
+            <p>If you're after a developer for your next project, have something you'd like to ask or just want to stay in touch, feel free to reach out.</p>
+            <a href= "mailto:ruuksine@gmail.com"><i class="fa-solid fa-envelope"></i>ruuksine@gmail.com</a>
+          </section>
+    </main>
+
+    <footer>
+      <nav>
+        <a href="https://github.com/wade-levels-up" target="_blank"><span class="fa-brands fa-github"></span></a>
+        <a href="https://www.instagram.com/wade.levels.up/" target="_blank"><span class="fa-brands fa-instagram"></span></a>
+      </nav>
+    </footer>
+
+  <script src="https://kit.fontawesome.com/74043cfcaf.js" crossorigin="anonymous"></script>
+  <script>
+      function navigateTo(url) {
+        window.location.href = url;
+      }
+  </script>
+  </body>
+</html>

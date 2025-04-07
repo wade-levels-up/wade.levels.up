@@ -81,7 +81,6 @@ header {
   gap: 2rem;
   padding: 1rem;
   width: 100%;
-  /* background: center / cover no-repeat url("./images/citylandscape.jpeg"); */
 }
 
 main {
@@ -167,6 +166,10 @@ section {
   outline: 2px solid var(--accent-color-1);
   border-left: 1px solid var(--accent-color-1);
   transform: scale(1.02);
+}
+
+.details {
+  flex: 1;
 }
 
 .projects-card .details img {
