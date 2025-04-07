@@ -38,15 +38,17 @@
 
         <section id="objective">
             <h2>Objective</h2>
-            <p>Co.Blog is a Jamstack project where the back-end and front-ends were created separately. The back-end API handles authentication with <abbr title="JSON Web Tokens">JWT's</abbr> so that it can remain stateless. <br />
-              The API was created before the clients so careful thought had to be put into architecting end points, as well as which end points would be accessible to different users.
+            <p>
+              For this project I wanted to create a blog site that had a client for authors to create, edit and delete blog posts, as well as a client for the general public to view posts, and signed-up users to post comments.<br />
+              The two front end clients needed to interact with my own API to collect blog posts and comments to display, as well as enable users to edit and delete their own comments.<br />
+              The API needed to be robust and securely handle different kinds of users and HTTP requests.
             </p>
         </section>
 
         <section class="img-container">
           <figure>
             <img class="sqr-img" src="./images/coblog-ipad-mini.webp" alt="">
-            <figcaption>Server-side validation and sanitization of form inputs provides feedback to the user as well as protecting end points from dirty data</figcaption>
+            <figcaption>Server-side validation and sanitization of form inputs provides feedback to the user as well as protecting end points from dirty or malicious data</figcaption>
           </figure>
         </section>
 
@@ -59,6 +61,7 @@
                 <li>PostgreSQL</li>
                 <li>Prisma</li>
                 <li>Node</li>
+                <li>Passport</li>
             </ul>
             <div>
               <p>
@@ -83,8 +86,8 @@
             <h2>Challenges</h2>
             <p>
               The first challenge of this project was deciding which end points and resources needed to be accessible, and by who.<br />
-              I spent a great deal of time testing end points using Postman to ensure they were only accessible to the right users and in the end not all of the end points were consumed by the front end.<br />
-              Things such as updating user details are available on the API, which could prove useful in the future should a user want to change their password or email address.<br />
+              I spent a great deal of time testing end points using Postman to ensure they were only accessible to the right users. In the end, not all of the end points were consumed by the front end.<br />
+              End points exist to update user details, which could prove useful in the future should a user want to change their password or email address.<br />
               <br />
               Secondly, deciding how my front ends would consume the API was also quite challenging. Originally I went down the path of creating a single page application, which looked to be working out well until it came down to
               implementing a way for users to share specifc blog posts...<br >
