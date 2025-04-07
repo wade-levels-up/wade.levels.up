@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wade Levels Up</title>
+  </head>
+
+  <body>
+
+    <nav class="fixedNav">
+        <button onclick="navigateTo('index.html')"><i class="fa-solid fa-house"></i>Home</button>
+        <button onclick="navigateTo('https://file-uploader-production-30c7.up.railway.app')"><i class="fa-solid fa-eye"></i>Live Site</button>
+    </nav>
+  
+    <header>
+        <h1>DataDrive95</h1>
+    </header>
+
+    <main>
+
+      <section class="img-container">
+          <img class="sqr-img" src="./images/Datadrive95-login.webp" alt="DataDrive95's login menu">
+      </section>
+
+        <section id="project-description">
+            <h2>Description</h2>
+            <p>A file uploader service that allows users to sign-up, login, upload files, download files and view details related to their files. Additionally users can create folders to store their files in.</p>
+        </section>
+
+        <section class="img-container">
+            <img class="tall-img" src="./images/Datadrive95-dash.webp" alt="DataDrive95's user dashboard showing folders and uploaded files">
+            <img class="tall-img" src="./images/Datadrive95-upload.webp" alt="DataDrive95's file uploader modal showing a file ready to be uploaded">
+        </section>
+
+        <section id="objective">
+            <h2>Objective</h2>
+            <p>My mission here was to create a file uploader service similar to Google Drive. Users would be able to create an account and securely upload their files via the browser to a Supabase-based cloud storage bucket.<br />
+              Files could then be downloaded or inspected to show their details including file type, date uploaded and file size.
+            </p>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <img class="sqr-img" src="./images/Datadrive95-details.webp" alt="">
+            <figcaption>After clicking on the file icon users can view file details such as name, size, type and date added. Options to download or delete the file are also available.</figcaption>
+          </figure>
+        </section>
+
+        <section id="tech">
+            <h2>Tech used</h2>
+            <ul>
+                <li>CSS</li>
+                <li>Supabase</li>
+                <li>Express</li>
+                <li>EJS</li>
+                <li>PostgreSQL</li>
+                <li>Prisma</li>
+                <li>Node</li>
+                <li>Passport</li>
+            </ul>
+            <div>
+              <p>
+                Supabase was the natural choice for cloud-based file storage. It's signed URLs meant I could add an additional layer of protection when it came to supplying download paths.<br />
+                Cloudinary was a runner up. Implementing Supabase was more straightforward and I didn't require the additional image capabilities of Cloudinary.
+              </p>
+              <br>
+              <p>
+                Passport was important for user authentication, as well as creating and persisting user sessions for up to 30 days. I wanted users to be able to come back and still be logged in for faster access to their files.
+              </p>
+            </div>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <img class="tall-img" src="./images/Datadrive95-folder-menu.webp" alt="DataDrive95's folder menu modal for creating, updating or deleting folders">
+            <figcaption>Being able to create, update and delete folders helps users organise their files. This menu is dynamic, meaning that if there aren't any folders to delete or update, the delete and update menus won't display.</figcaption>
+          </figure>
+        </section>
+
+        <section id="challenges">
+            <h2>Challenges</h2>
+            <p>
+              Using cloud-based file storage changed the way I thought about architecting the database.<br />
+              Initially I'd hoped I could store files on the database itself. But, it was a paradigm shift to think of the database as only holding meta-data related to the files and not the files themselves! 🤯<br />
+              <br />
+              Additionally, I had a friend run penetration tests on the site. I love it when someone can break my sites! And... break it he did! Which I was thankful for. The tests revealed that user's files could be
+              accessed by anyone simply by replacing the file's index number in the URL parameteres... Oops.<br />
+              After this I implemented middleware that checks the file ID's against the user's ID to ensure only people who own the files are able to download them.<br />
+              This was a great learning experience!
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Let's Keep in Touch</h2>
+            <p>If you're after a developer for your next project, have something you'd like to ask or just want to stay in touch, feel free to reach out.</p>
+            <a href= "mailto:ruuksine@gmail.com"><i class="fa-solid fa-envelope"></i>ruuksine@gmail.com</a>
+          </section>
+    </main>
+
+    <footer>
+      <nav>
+        <a href="https://github.com/wade-levels-up" target="_blank"><span class="fa-brands fa-github"></span></a>
+        <a href="https://www.instagram.com/wade.levels.up/" target="_blank"><span class="fa-brands fa-instagram"></span></a>
+      </nav>
+    </footer>
+
+  <script src="https://kit.fontawesome.com/74043cfcaf.js" crossorigin="anonymous"></script>
+  <script>
+      function navigateTo(url) {
+        window.location.href = url;
+      }
+  </script>
+  </body>
+</html>
