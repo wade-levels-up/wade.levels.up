@@ -169,14 +169,18 @@ section {
 }
 
 .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex: 1;
 }
 
-.projects-card .details img {
-  float: left;
-  margin-right: 16px;
+.projects-card .details img, .projects-card .details video {
+  width: 100%;
   margin-bottom: 1rem;
+  flex: 1
 }
+
 
 .projects-card span {
   display: flex;
