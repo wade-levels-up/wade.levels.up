@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wade Levels Up</title>
+  </head>
+
+  <body>
+
+    <nav class="fixedNav">
+        <button onclick="navigateTo('index.html')"><i class="fa-solid fa-house"></i>Home</button>
+        <button onclick="navigateTo('https://findsonicfast.netlify.app/')"><i class="fa-solid fa-eye"></i>Live Site</button>
+    </nav>
+  
+    <header>
+        <h1>Find Sonic Fast</h1>
+    </header>
+
+    <main>
+        <section id="project-description">
+            <h2>Description</h2>
+            <p>
+              Based on the 'Where's Sonic Now' book by Ladybird (UK) and inspired by the Sonic 3 and Sonic & Knuckles games on Sega, Find Sonic Fast is a 'Where's Wally' style game where users go head to head to see who can find Sonic and the team in the fastest time.
+            </p>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <img class="sqr-img" src="./images/find-sonic-fast-wide.webp" alt="">
+            <figcaption>
+              Tracking the user's click position whether they were playing on mobile or desktop was crucial as the image size also had to change to suit wide layouts. <br>
+              Media queries meant elements such as the music player and excess text were hidden on mobile devices to make sure the level map remained the central focus.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="objective">
+            <h2>Objective</h2>
+            <p>
+              I wanted to experiment with the idea of photo-tagging, where people can tag their friends in a picture by clicking on the image, but I wanted to twist the idea into a game of finding characters inside a busy image.<br>
+              The timer was something I wanted right from the start too. I knew it would create pressure to finish the game fast and get the player's adrenaline going a little!<br>
+              Going the extra mile on this project I challenged myself to implement sound effects, music and animations to showcase my creativity across image editing and working with audio.<br>
+            </p>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <img class="sqr-img" src="./images/find-sonic-fast-level-select-desktop.webp" alt="">
+            <figcaption>
+              The Level Select screen utilizes a responsive grid layout that looks great on all devices.<br>
+              CSS pixelated image-rendering preserves the expression of the artwork used from the original game to provide a sprinkle of nostalgia.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="tech">
+            <h2>Tech used</h2>
+            <ul>
+                <li>React</li>
+                <li>Express</li>
+                <li>PostgreSQL</li>
+                <li>Prisma</li>
+                <li>Node</li>
+                <li>Aseprite</li>
+            </ul>
+            <div>
+              <p>
+                Using React for the front end allowed me to create reusable components such as the Level Select cards and Level Pages. This meant it was super simple to scale up when it came to adding new levels, future-proofing the project in the event I ever wanted to add more levels.<br>
+              </p>
+              <br>
+              <p>
+                My Node-powered back end made use of the Express-Session npm package as well as <abbr title="json web tokens">JWT</abbr>'s for authentication. This kept the game from being tampered with by storing the player's score inside sessions that require a token to access ( A task I discovered cookies weren't the best for! ).
+              </p>
+            </div>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <div style="display: flex; justify-content: space-evenly; gap: 1rem">
+              <img class="tall-img" src="./images/find-sonic-fast-ip12-pro-2.webp" alt="Co.Blog user client in mobile view">
+              <img class="tall-img" src="./images/find-sonic-fast-ip12-pro-1.webp" alt="Co.Blog author client in mobile view">
+            </div>
+            <figcaption>A player targets Knuckles The Echidna on the Marble-Garden-Zone map. <br>The leaderboard tracks the fastest times from anonymous players.</figcaption>
+          </figure>
+        </section>
+
+        <section id="challenges">
+            <h2>Challenges</h2>
+            <p>
+              From the start I knew it was going to be a challenge to handle anonymous users and validate them without a sign-in or sign-up method.
+              Initially, I'd implemented sessions using the Express-Session npm package which would store the session ID in a cookie sent to the user.
+              This worked great in a local environment, but when it came to deployment and having my front end and back end hosted on different domains I quickly realised it would be troublesome to implement cross-domain cookies!<br>
+              Uh oh...
+            </p>
+            <p>
+              After scratching my head for a few days I went back to the drawing board and refactored the project to authenticate users using json web tokens instead of cookies.
+              I ended up keeping sessions as they had some nice features that allowed me to track the game state, as well as self-pruning to keep the database clear. <abbr title="json web tokens">JWT</abbr>'s worked much nicer cross-domain.
+              In the end I had the best of both worlds!
+            </p>
+            <p>
+              Being a media-heavy project with lots of images, GIFs and audio I had to keep file sizes to a minimum so the game would work well on a variety of connection speeds.
+              Audio was especially challenging here... Thankfully I used my past experience in music production to compress the mp3 files down as far as possible without sounding noticeably bad. 
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Let's Keep in Touch</h2>
+            <p>If you're after a developer for your next project, have something you'd like to ask or just want to stay in touch, feel free to reach out.</p>
+            <a href= "mailto:ruuksine@gmail.com"><i class="fa-solid fa-envelope"></i>ruuksine@gmail.com</a>
+          </section>
+    </main>
+
+    <footer>
+      <nav>
+        <a href="https://github.com/wade-levels-up" target="_blank"><span class="fa-brands fa-github"></span></a>
+        <a href="https://www.instagram.com/wade.levels.up/" target="_blank"><span class="fa-brands fa-instagram"></span></a>
+      </nav>
+    </footer>
+
+  <script src="https://kit.fontawesome.com/74043cfcaf.js" crossorigin="anonymous"></script>
+  <script>
+      function navigateTo(url) {
+        window.location.href = url;
+      }
+  </script>
+  </body>
+</html>
