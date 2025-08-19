@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wade Levels Up</title>
+  </head>
+
+  <body>
+
+    <nav class="fixedNav">
+        <button onclick="navigateTo('index.html')"><i class="fa-solid fa-house"></i>Home</button>
+        <button onclick="navigateTo('https://www.buddingmessenger.com/')"><i class="fa-solid fa-eye"></i>Live Site</button>
+    </nav>
+  
+    <header>
+        <h1 style="text-align: center;">Budding Messenger</h1>
+    </header>
+
+    <main>
+
+        <section id="project-description">
+            <h2>Description</h2>
+            <p>
+              A modern, real-time messaging application built with React, TypeScript and Express. Features one-on-one conversations, group chats, and an innovative conversation tone visualization system that allows users to grow a tree together.
+            </p>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <img class="sqr-img" src="./images/budding-messenger-profile-page.webp" alt="">
+            <figcaption>
+              Upon logging in, users are greeted by their profile page where they can update their bio and profile picture.<br>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="objective">
+            <h2>Objective</h2>
+            <p>
+                Budding Messenger was an idea I had for a messaging platform that encourages positive interaction between users.<br>
+                A tree appears in the background of a conversation between users and the tone of their messages is analysed. If a majority of their conversation is positive the tree will grow!<br>
+                This was a learning project for me where I tackled a lot of new methods and technologies such as TypeScript, writing documentation, deploying via AWS, Tailwind CSS and persistent server connections via Websockets.
+            </p>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <img class="sqr-img" src="./images/budding-messenger-trees.webp" alt="">
+            <figcaption>
+                Trees grown between users have five different stages of growth<br>
+                They grow to different levels based on the overall tone of the conversation as well as total quantity of messages!
+                Growing a big tree requires <u>LOTS</u> of positive messages.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="tech">
+            <h2>Tech used</h2>
+            <ul>
+                <li>React</li>
+                <li>Express</li>
+                <li>PostgreSQL</li>
+                <li>Prisma</li>
+                <li>Node</li>
+                <li>TypeScript</li>
+                <li>AWS</li>
+                <li>Socket.io</li>
+                <li>Sentiment</li>
+                <li>Tailwind CSS</li>
+                <li>Jest</li>
+            </ul>
+            <div>
+                <p>
+                    Budding Messenger's front-end is powered by loads of tech! Some of the key players for this project were Tailwind CSS which allowed for rapid styling, Socket.io for persistent connections that enable 'instant' messaging, the Sentiment npm package for analysing the tone of messages and React Router for handling navigation and context for routes.
+                </p>
+                <br>
+                <p>
+                    Server-side TypeScript ensures the integrity of data, whilst deployment via Amazon Web Services meant I could utilize a load balancer to handle both HTTPS and Websocket connections simulatneously.
+                </p>
+                <br>
+                <p>
+                    Documentation-driven development with Jest for testing gave me confidence that my API was robust and easy to interface with as it let me create a quick reference table for my endpoints and resources.
+                </p>
+            </div>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <div style="display: flex; justify-content: space-evenly; gap: 1rem">
+              <img class="tall-img" src="./images/budding-messenger-creating-group-chat.webp" alt="Co.Blog user client in mobile view">
+              <img class="tall-img" src="./images/budding-messenger-group-chat.webp" alt="Co.Blog author client in mobile view">
+            </div>
+            <figcaption>
+                Group chats can be created with up to five users.<br>
+                On Mobile devices '+' symbols appear on the users, whereas Desktop devices can 'drag-and-drop' users into the 'Creating Group Chat Zone' to add them to the new group.<br>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="challenges">
+            <h2>Challenges</h2>
+            <p>
+                Deploying with Amazon Web Services (AWS) for the first time was quite the learning curve!<br>
+                It was challenging working out which combination of their services would best suit my deployment.
+            </p>
+            <p>
+                Initially I thought Lambda would work well for my server, though I learnt that it wouldn't be able to easily manage the combined HTTPS and Websocket connections used.<br>
+                This lead me down the path of using EC2 to host the server with a load balancer to enable Socket.io's Websockets.
+            </p>
+            <p>
+                Configuring a lot of settings manually stretched my capacity. Having used a combination of Railway and Netlify to deploy previously, I gained a lot of respect for how much of the heavy lifting these services provide.<br>
+                AWS really is feature-packed! My favourite part was interacting with my server in the cloud on an EC2 instance through the terminal. Virtual machines rock! 🤘
+            </p>
+        </section>
+
+        <img src="./images/budding-messenger-sprout.png" alt="Tails being silly" width="100px">
+
+        <section id="contact">
+            <h2>Let's Keep in Touch</h2>
+            <p>If you're after a developer for your next project, have something you'd like to ask or just want to stay in touch, feel free to reach out.</p>
+            <a href= "mailto:ruuksine@gmail.com"><i class="fa-solid fa-envelope"></i>ruuksine@gmail.com</a>
+          </section>
+    </main>
+
+    <footer>
+      <nav>
+        <a href="https://github.com/wade-levels-up" target="_blank"><span class="fa-brands fa-github"></span></a>
+        <a href="https://www.instagram.com/wade.levels.up/" target="_blank"><span class="fa-brands fa-instagram"></span></a>
+      </nav>
+    </footer>
+
+  <script src="https://kit.fontawesome.com/74043cfcaf.js" crossorigin="anonymous"></script>
+  <script>
+      function navigateTo(url) {
+        window.location.href = url;
+      }
+  </script>
+  </body>
+</html>

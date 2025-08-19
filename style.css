@@ -111,6 +111,10 @@ a:hover, a:focus {
   color: var(--accent-color-1);
 }
 
+a[id].projects-card {
+  color: var(--text-color)
+}
+
 button {
   padding: 3px 18px;
   border: none;
@@ -151,7 +155,7 @@ section {
 
 .projects-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 1rem;
   padding: 12px;
   width: 100%;
@@ -171,7 +175,7 @@ section {
 .details {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   flex: 1;
 }
 
