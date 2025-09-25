@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./images/logo.png" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wade Levels Up</title>
+  </head>
+
+  <body>
+
+    <nav class="fixedNav">
+        <button onclick="navigateTo('index.html')"><i class="fa-solid fa-house"></i>Home</button>
+        <button onclick="navigateTo('https://sapien-base.vercel.app/')"><i class="fa-solid fa-eye"></i>Live Site</button>
+    </nav>
+  
+    <header>
+        <h1 style="text-align: center;">Sapien-Base</h1>
+    </header>
+
+    <main>
+
+        <section id="project-description">
+            <h2>Description</h2>
+            <p>
+              A social-media platform where users can follow other users, create, like and comment on posts and update their user profile.
+            </p>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <img class="sqr-img" src="./images/Sapienbase2.webp" alt="">
+            <figcaption>
+              The Profile page allows users to update their bio as well as view posts they've created, follow requests, people they're following and people they're followed by.<br>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="objective">
+            <h2>Objective</h2>
+            <p>
+                The objective of Sapien-Base was to create a social-media platform that covered the core functionality of social-media.<br>
+                Users would be able to follow and be followed by other users upon accepting follow requests. They'd be able to create posts as well as like and comment on posts by other users. Additionally, their dashboard would be populated with recent posts from themselves and users they follow, and they could manage a user profile containing a bio and profile picture.
+            </p>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <img class="sqr-img" src="./images/Sapienbase3.webp" alt="">
+            <figcaption>
+                Viewing the comments on a post also exposes a form to add your own comment. 
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="tech">
+            <h2>Tech used</h2>
+            <ul>
+                <li>Next.js</li>
+                <li>React</li>
+                <li>PostgreSQL</li>
+                <li>Prisma</li>
+                <li>TypeScript</li>
+                <li>Vercel</li>
+                <li>Supabase</li>
+                <li>Tailwind CSS</li>
+                <li>Clerk</li>
+            </ul>
+            <div>
+                <p>
+                    Sapien-Base is powered primarily by Next.js which provides a first-class full-stack framework developer experience. It made development crazily fast, with this project taking only a month from start to finish.
+                </p><br>
+                <p>
+                    The ability to create pages server-side meant it wasn't necessary to create an API and endpoints for resources. Because of Next.js's server components I could more freely access and handle database interactions.
+                </p><br>
+                <p>
+                    Next.js really helped with the user experience too. The ability to easily implement loading screens, skeleton loaders and optimistic updates keep Sapien-Base feeling super fast - as if it were a native app.
+                </p>
+            </div>
+        </section>
+
+        <section class="img-container">
+          <figure>
+            <div style="display: flex; justify-content: space-evenly; gap: 1rem">
+              <img class="tall-img" src="./images/Sapienbase5.webp" alt="Sapien-Base User Dashbord on Mobile Device">
+              <img class="tall-img" src="./images/Sapienbase6.webp" alt="Sapien-Base Loading User Profile on Mobile Device">
+            </div>
+            <figcaption>
+                The responsive design looks great no matter what device is being used.<br>
+                Different loading messages could be displayed depending on which page was navigated to. The image on the right shows the loader when navigating to the Profile page.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="challenges">
+            <h2>Challenges</h2>
+            <p>
+                I ran into some difficulties during deployment, as this was my first time deploying with Vercel. Initially in development I'd used a direction connection string to my cloud-based Supabase PostgreSQL database. BUT, as it turns out, when deploying to Vercel - and Vercel communicating with external sources - it prefers to use a pooling connection string!
+            </p>
+            <p>
+                As Vercel would trigger a build each time a change was made on the main Git branch I decided to do the bulk of development on a seperate 'development' branch. This prevented automatic re-deploys whilst I was working on new features.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Let's Keep in Touch</h2>
+            <p>If you're after a developer for your next project, have something you'd like to ask or just want to stay in touch, feel free to reach out.</p>
+            <a href= "mailto:ruuksine@gmail.com"><i class="fa-solid fa-envelope"></i>ruuksine@gmail.com</a>
+          </section>
+    </main>
+
+    <footer>
+      <nav>
+        <a href="https://github.com/wade-levels-up" target="_blank"><span class="fa-brands fa-github"></span></a>
+        <a href="https://www.instagram.com/wade.levels.up/" target="_blank"><span class="fa-brands fa-instagram"></span></a>
+      </nav>
+    </footer>
+
+  <script src="https://kit.fontawesome.com/74043cfcaf.js" crossorigin="anonymous"></script>
+  <script>
+      function navigateTo(url) {
+        window.location.href = url;
+      }
+  </script>
+  </body>
+</html>
